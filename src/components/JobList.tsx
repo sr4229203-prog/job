@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import JobCard from './JobCard';
-import SearchBar, { FilterOptions } from './SearchBar';
-import { Job } from '../types';
+import SearchBar from './SearchBar';
+import type { FilterOptions } from './SearchBar';
+import type { Job } from '../types';
 import './JobList.css';
 
 interface JobListProps {

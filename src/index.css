@@ -4,16 +4,29 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
   background-color: #fafafa;
   color: #1a1a1a;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  display: block;
+  background-color: white;
 }
 
 a {
