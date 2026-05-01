@@ -19,7 +19,11 @@ const Navigation: React.FC = () => {
     { label: 'Browse Jobs', path: '/jobs', icon: '💼' },
     { label: 'Saved Jobs', path: '/saved-jobs', icon: '❤️' },
     { label: 'Applications', path: '/applications', icon: '📨' },
-    ...(user?.role === 'faculty' || user?.role === 'admin' ? [{ label: 'Post Job', path: '/post-job', icon: '➕' }] : []),
+    ...(user?.role === 'faculty' || user?.role === 'admin' ? [
+      { label: 'Post Job', path: '/post-job', icon: '➕' },
+      { label: 'Analytics', path: '/analytics', icon: '📈' }
+    ] : []),
+    { label: 'Settings', path: '/settings', icon: '⚙️' },
   ];
 
   return (

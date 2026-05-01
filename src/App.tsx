@@ -7,6 +7,9 @@ import Navigation from './components/Navigation'
 import LoginPage from './pages/LoginPage'
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import PostJobPage from './pages/PostJobPage'
+import JobDetailPage from './pages/JobDetailPage'
+import AnalyticsPage from './pages/AnalyticsPage'
+import SettingsPage from './pages/SettingsPage'
 import DashboardPage from './pages/DashboardPage'
 import JobsPage from './pages/JobsPage'
 import ProfilePage from './pages/ProfilePage'
@@ -22,6 +25,15 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/post-job" element={<PostJobPage />} />
+            <Route path="/job/:id" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <JobDetailPage />
+                </main>
+              </>
+            } />
             <Route path="/dashboard" element={
               <>
                 <Navigation />
@@ -73,6 +85,24 @@ function App() {
                 <Header />
                 <main>
                   <ApplicationsPage />
+                </main>
+              </>
+            } />
+            <Route path="/analytics" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <AnalyticsPage />
+                </main>
+              </>
+            } />
+            <Route path="/settings" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <SettingsPage />
                 </main>
               </>
             } />
