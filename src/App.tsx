@@ -13,7 +13,13 @@ import SettingsPage from './pages/SettingsPage'
 import DashboardPage from './pages/DashboardPage'
 import JobsPage from './pages/JobsPage'
 import ProfilePage from './pages/ProfilePage'
+import EnhancedProfilePage from './pages/EnhancedProfilePage'
 import SimplePage, { SavedJobsPage, ApplicationsPage } from './pages/SimplePage'
+import NotificationsPage from './pages/NotificationsPage'
+import TermsPage from './pages/TermsPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
+import RecommendationsPage from './pages/RecommendationsPage'
 import { sampleJobs } from './data'
 
 function App() {
@@ -106,6 +112,50 @@ function App() {
                 </main>
               </>
             } />
+            <Route path="/notifications" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <NotificationsPage />
+                </main>
+              </>
+            } />
+            <Route path="/recommendations" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <RecommendationsPage />
+                </main>
+              </>
+            } />
+            <Route path="/enhanced-profile" element={
+              <>
+                <Navigation />
+                <Header />
+                <main>
+                  <EnhancedProfilePage />
+                </main>
+              </>
+            } />
+            <Route path="/about" element={
+              <>
+                <Header />
+                <main>
+                  <AboutPage />
+                </main>
+              </>
+            } />
+            <Route path="/contact" element={
+              <>
+                <Header />
+                <main>
+                  <ContactPage />
+                </main>
+              </>
+            } />
+            <Route path="/terms" element={<TermsPage />} />
             <Route path="/" element={
               <>
                 <Header />

@@ -17,12 +17,15 @@ const Navigation: React.FC = () => {
   const menuItems = [
     { label: 'Dashboard', path: '/dashboard', icon: '📊' },
     { label: 'Browse Jobs', path: '/jobs', icon: '💼' },
+    { label: 'Recommendations', path: '/recommendations', icon: '⭐' },
     { label: 'Saved Jobs', path: '/saved-jobs', icon: '❤️' },
     { label: 'Applications', path: '/applications', icon: '📨' },
     ...(user?.role === 'faculty' || user?.role === 'admin' ? [
       { label: 'Post Job', path: '/post-job', icon: '➕' },
       { label: 'Analytics', path: '/analytics', icon: '📈' }
     ] : []),
+    { label: 'Profile', path: '/enhanced-profile', icon: '👤' },
+    { label: 'Notifications', path: '/notifications', icon: '🔔', badge: 3 },
     { label: 'Settings', path: '/settings', icon: '⚙️' },
   ];
 
