@@ -1,0 +1,160 @@
+.jobs-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.jobs-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.jobs-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.jobs-header p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.jobs-search {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.search-field {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.search-field:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.job-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.job-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: #667eea;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.job-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.job-type-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.job-institution {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.job-location,
+.job-field,
+.job-salary,
+.job-deadline {
+  font-size: 12px;
+  color: #999;
+  margin: 6px 0;
+}
+
+.job-deadline {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.view-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.view-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .jobs-page {
+    padding: 20px 12px;
+  }
+
+  .jobs-header h1 {
+    font-size: 24px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}
